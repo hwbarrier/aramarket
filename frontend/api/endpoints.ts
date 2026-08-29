@@ -1,0 +1,25 @@
+export const endpoints = {
+  auth: {
+    login: "/auth/login/",
+    register: "/auth/register/",
+    supabaseLogin: "/auth/supabase/",
+    logout: "/auth/logout/",
+    currentUser: "/auth/me/",
+    refresh: "/auth/refresh/",
+    csrf: "/auth/csrf/",
+  },
+  products: "/products/",
+  vendors: "/vendors/",
+  vendorProducts: (id: string) => `/vendors/${id}/products/`,
+  vendorDashboard: "/vendor/dashboard/",
+  categories: "/categories/",
+  orders: "/orders/",
+  reviews: "/reviews/",
+  admin: {
+    dashboard: "/admin/dashboard/",
+    vendors: "/admin/vendors/",
+    products: "/admin/products/",
+    orders: "/admin/orders/",
+    users: "/admin/users/",
+  },
+} as const;
